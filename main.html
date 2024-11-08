@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date and Time</title>
+    <style>
+        body {
+            text-align: center;
+            padding-top: 50px;
+            font-family: Arial, sans-serif;
+        }
+        #date-time {
+            font-size: 3em;
+        }
+    </style>
+</head>
+<body>
+    <div id="date-time"></div>
+    <script>
+        const dateTime = document.getElementById('date-time');
+        dateTime.textContent = new Date().toLocaleString();
+    </script>
+</body>
+</html>
