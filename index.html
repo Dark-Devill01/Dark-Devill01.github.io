@@ -1,23 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Date and Time</title>
-    <style>
-        body {
-            text-align: center;
-            padding-top: 50px;
-            font-family: Arial, sans-serif;
-        }
-        #date-time {
-            font-size: 3em;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Clock</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="date-time"></div>
-    <script>
-        const dateTime = document.getElementById('date-time');
-        dateTime.textContent = new Date().toLocaleString();
-    </script>
+    <div class="container">
+        <h1>Real-Time Clock</h1>
+        <div id="clock" class="clock"></div>
+        <div id="date" class="date"></div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
