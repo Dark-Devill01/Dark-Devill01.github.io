@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 1540px;
+    font-family: Arial, sans-serif;
+    background-image: url("img/bg.png");
+}
+
+.container {
+    max-width: 900px;
+    max-height: 2000px;
+    margin: auto;
+    padding: 100px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(27, 134, 255);
+    text-align: center;
+}
+header {
+    margin-bottom: 20px;
+}
+
+.download-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.download-card{
+    background: #e9e9e9;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 calc(30% - 20px);
+    position: relative;
+    transition: transform 0.2s;
+}
+
+.download-card:hover {
+    transform: scale(1.05);
+}
+
+.download-btn {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: #FFF;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+}
+
+.download-btn::after{
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    width: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+.download-btn::before{
+    content: "";
+    background: linear-gradient(
+        45deg,
+        #FF0000, #FF7300, #FFFB00, #48FF00,
+        #00ffd5, #002bff, #FF00C8, #FF0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    opacity: 0;
+}
+@keyframes glowing {
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}
+
+}
+.download-btn:hover::before{
+    opacity: 1;
+}
+.download-btn:active::after{
+    background:transparent;
+}
+.download-btn:active{
+    color: #000;
+    font-weight: bold;
+}
+.tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    opacity: 0;
+    transition: opacity 0.2s;
+    white-space: nowrap;
+}
+
+.download-card:hover .tooltip {
+    opacity: 1;
+}
+
+.sc_shot{
+    font-size: 30px;
+}
+
+.infomation{
+    color: #0f5996;
+    font-size: 16px;
+    text-align: left;
+
+}
+.runadmin{
+    color: red;
+}
