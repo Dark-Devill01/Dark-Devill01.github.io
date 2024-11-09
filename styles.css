@@ -83,7 +83,7 @@ header {
     filter: blur(8px);
     animation: glowing 20s linear infinite;
     transition: opacity .3s ease-in-out;
-    opacity: 0;
+    opacity: 1;
 }
 @keyframes glowing {
     0% {background-position: 0 0;}
